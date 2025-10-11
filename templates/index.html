@@ -9,8 +9,36 @@
 <body>
   <div class="container">
     <h1>Border Bridge ETA</h1>
-    <p class="sub">Scaffold is up.</p>
+    <p class="sub">Pick origin & destination. I’ll factor live border waits + traffic.</p>
+
+    <div class="form">
+      <label>Origin</label>
+      <input id="origin" type="text" placeholder="Start typing address…" autocomplete="off">
+
+      <label>Destination</label>
+      <input id="destination" type="text" placeholder="Start typing address…" autocomplete="off">
+
+      <label>Lane</label>
+      <select id="mode">
+        <option value="standard" selected>Standard</option>
+        <option value="ready">Ready</option>
+        <option value="sentri">SENTRI</option>
+        <option value="pedestrian">Pedestrian</option>
+      </select>
+
+      <button id="go">Calculate</button>
+      <div id="msg" class="msg"></div>
+    </div>
+
+    <div id="results" class="results hidden">
+      <h2 id="winner"></h2>
+      <div id="cards"></div>
+    </div>
   </div>
+
   <script src="/static/app.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_BROWSER_KEY }}&libraries=places&callback=initAutocomplete"
+    async defer></script>
 </body>
 </html>

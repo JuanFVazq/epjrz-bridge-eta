@@ -1,3 +1,42 @@
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; background:#0c0f14; color:#e9eef4; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  background: #0c0f14;
+  color: #e9eef4;
+}
 .container { max-width: 760px; margin: 40px auto; padding: 0 16px; }
-.sub { color:#98a3b2; }
+h1 { margin: 0 0 10px; font-size: 28px; }
+.sub { color: #98a3b2; margin: 0 0 24px; }
+
+.form {
+  background: #141a23;
+  border: 1px solid #222a36;
+  padding: 16px;
+  border-radius: 10px;
+}
+label { display: block; margin: 10px 0 6px; color: #98a3b2; }
+input, select, button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #222a36;
+  background: #0f1420;
+  color: #e9eef4;
+}
+button { margin-top: 16px; cursor: pointer; }
+
+.results { margin-top: 24px; }
+.hidden { display: none; }
+
+#cards { display: grid; gap: 12px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { #cards { grid-template-columns: 1fr 1fr; } }
+
+.card {
+  background: #141a23;
+  border: 1px solid #222a36;
+  border-radius: 10px;
+  padding: 14px;
+}
+.card h3 { margin: 0 0 10px; color: #59a7ff; font-size: 18px; }
+.card .row { display: flex; justify-content: space-between; padding: 4px 0; }
+.card .row span { color: #98a3b2; }
